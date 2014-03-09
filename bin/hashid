@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+require_relative('../lib/hashid')
+
+if ARGV[0].nil?
+  puts "Usage: hashid <hash string>"
+else
+  hash = ARGV[0].strip
+  hashes = Hashid.HashID(hash)
+  if hashes.empty?
+    puts "No hash types match #{hash}"
+    exit 1
+  else
+    puts hashes
+    exit 0
+  end  
+end
