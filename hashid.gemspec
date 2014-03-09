@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Alice Kaerast"]
   spec.email         = ["alice@kaerast.info"]
   spec.description   = %q{identify the different types of hashes used to encrypt data}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.summary       = %q{hashID supports the identification of over 130 unique hash types using regular expressions}
+  spec.homepage      = "https://github.com/kaerast/hashID"
+  spec.license       = "GPL v3"
 
   spec.files         = `git ls-files`.split($/)
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
