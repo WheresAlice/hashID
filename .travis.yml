@@ -1,0 +1,5 @@
+language: ruby
+rvm:
+ - jruby-head
+ - ruby-head
+script: ruby tests/hashid_test.rb
