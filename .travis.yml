@@ -2,4 +2,6 @@ language: ruby
 rvm:
  - jruby-head
  - ruby-head
-script: ruby tests/hashid_test.rb
+script: bundle exec ruby tests/hashid_test.rb
+cache: bundler
+sudo: false
