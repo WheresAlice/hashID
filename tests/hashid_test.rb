@@ -2,8 +2,8 @@ require_relative '../lib/hashid'
 require 'minitest/autorun'
 
 describe Hashid do
-  it 'has a 130 hash formats' do
-    assert_equal 130, Hashid::HASHES.flatten.length
+  it 'has 132 hash formats' do
+    assert_equal 132, Hashid::HASHES.flatten.length
   end
   
   it 'can identify MD5 hashes' do
@@ -12,7 +12,6 @@ describe Hashid do
   end
 
   it 'returns an empty array if no hash format can be identified' do
-    require 'digest/md5'
     assert_empty Hashid.HashID('hello world')
   end
   
@@ -24,5 +23,9 @@ describe Hashid do
   it 'gives an error message if no hash is given' do
     output = `#{File.join(File.dirname(__FILE__), '../bin/')}hashid`
     assert_includes output, 'Usage:'
+  end
+
+  it 'handles Base64 encoding' do
+    assert_includes(Hashid.HashID('Z2l2ZSBtZSBhIGxvbmcgc3RyaW5nCg=='), 'Base64')
   end
 end

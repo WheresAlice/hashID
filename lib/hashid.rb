@@ -64,7 +64,8 @@ module Hashid
 		  /^sha256\$[a-z0-9\/\.]{1,12}\$[a-f0-9]{64}$/ => ["SHA-256(Django)"],
 		  /^sha384\$[a-z0-9\/\.]{1,12}\$[a-f0-9]{96}$/ => ["SHA-384(Django)"],
 		  /^[^\\\/:*?\"\<\>\|]{1,15}:[^\\\/:*?\"\<\>\|]{1,15}:[a-f0-9]{32}:[a-f0-9]{32}:{0,3}$/ => ["Domain Cached Credentials"],
-		  /^\$scram\$.+$/ => ["SCRAM Hash"]
+		  /^\$scram\$.+$/ => ["SCRAM Hash"],
+      /^[a-zA-Z0-9+]+={0,2}$/ => ["Base64"]
     }
   
   def HashID(hash)    
