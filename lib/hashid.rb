@@ -70,7 +70,7 @@ module Hashid
   def HashID(hash)    
     hash = hash.strip.to_s
     possible_hashes = HASHES.select {|k,v| k === hash }
-    possible_hashes.values[0]
+    Array(possible_hashes.values[0])
   end
   module_function :HashID
 end
