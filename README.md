@@ -1,6 +1,8 @@
 hashID
 ======
 
+[![Build Status](https://travis-ci.org/kaerast/hashID.svg?branch=master)](https://travis-ci.org/kaerast/hashID)
+
 Identify the different types of hashes used to encrypt data and especially passwords.
 
 This tool replaces [hash-identifier](http://code.google.com/p/hash-identifier/), which is outdated!
@@ -43,7 +45,7 @@ Supported hashes
 ------
 ```
 Adler-32, Apache MD5, AIX(smd5), AIX(ssha1), AIX(ssha256), AIX(ssha512)
-Blowfish(Eggdrop), Blowfish(OpenBSD), BSDi Crypt, BCrypt(SHA256)
+Base64, Blowfish(Eggdrop), Blowfish(OpenBSD), BSDi Crypt, BCrypt(SHA256)
 CRC-16, CRC-16-CCITT, CRC-32, CRC-32B, CRC-64, CRC-96(ZIP), Cisco-IOS(MD5), Cisco-IOS(SHA256), Cisco-PIX(MD5)
 CryptoCurrency(Adress), CryptoCurrency(PrivateKey), Crypt16
 Domain Cached Credentials, Domain Cached Credentials 2, DES(Unix), DES(Oracle)
